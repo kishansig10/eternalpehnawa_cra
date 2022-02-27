@@ -57,7 +57,7 @@ const FormPayment = ({ backStep, customerShippingData, nextStep }) => {
 
     try {
       const data = await axios.post(
-        "https://youthful-kirch-24c6e7.netlify.app/.netlify/functions/razorpay",
+        "/.netlify/functions/razorpay",
         {
           orderAmount: checkoutToken?.live?.total_with_tax?.raw,
         },
