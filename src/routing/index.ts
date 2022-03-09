@@ -58,10 +58,6 @@ const routes = [
     path: "/confirmation/:id",
     component: Confirmation,
   },
-  {
-    path: "/my-account",
-    component: MyAccountContainer,
-  },
 ];
 
 export default routes;
