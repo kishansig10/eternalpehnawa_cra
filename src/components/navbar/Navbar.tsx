@@ -129,7 +129,7 @@ const Navbar = () => {
               <div style={{ display: "flex", alignItems: "center" }}>
                 <NavbarLogin />
                 <Cart />
-                <WishList />
+                {/* <WishList /> */}
               </div>
             </div>
           </div>

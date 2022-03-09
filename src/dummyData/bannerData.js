@@ -2,7 +2,7 @@
 export const bannerData = [
   {
     header: "Demo Header is for testing",
-    desc: "lorem ipsum is the only way to get it",
+    desc: "Shop now for beautiful sarees",
     price: "$345k",
     path: "/assets",
     label: "Home",
@@ -11,7 +11,7 @@ export const bannerData = [
   },
   {
     header: "Demo Header is for testing2",
-    desc: "lorem ipsum is the only way t2o get it",
+    desc: "Suits and more available",
     price: "$3452k",
     path: "/assets",
     label: "Home2",
@@ -20,7 +20,7 @@ export const bannerData = [
   },
   {
     header: "D3emo Header is for testing",
-    desc: "lorem ipsum is the only way to get it",
+    desc: "Tired of boring furniture? We have you covered",
     price: "$343k",
     path: "/assets",
     label: "Home3",

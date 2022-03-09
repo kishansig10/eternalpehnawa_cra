@@ -158,12 +158,12 @@ const Product = ({
               <IconButton className={classes.addToCartBtn}>
                 <AddShoppingCartRoundedIcon />
               </IconButton>
-              <IconButton
+              {/* <IconButton
                 className={classes.addToCartBtn}
                 onClick={handleAddToCart}
               >
                 <FavoriteBorderIcon />
-              </IconButton>
+              </IconButton> */}
             </div>
           </motion.div>
           <div className={classes.nameAndPrice}>

@@ -184,9 +184,9 @@ export default function Product({ productId }: { productId: string }) {
           )}
         </CardContent>
         <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-          <IconButton onClick={handleRemovefromWishlist}>
+          {/* <IconButton onClick={handleRemovefromWishlist}>
             <FavoriteBorderIcon sx={{ height: 25, width: 25 }} />
-          </IconButton>
+          </IconButton> */}
           <IconButton onClick={goToProductDetailsPage}>
             <AddShoppingCartIcon sx={{ height: 25, width: 25 }} />
           </IconButton>
