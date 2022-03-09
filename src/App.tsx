@@ -8,6 +8,8 @@ import { useGetAllCustomersQuery } from "./redux/services/customers";
 import { useGetAllCategoriesQuery } from "./redux/services/products";
 import { commerce } from "./lib/commerce";
 import axios from "axios";
+import PrivateRoute from "./auth/PrivateRoute";
+import MyAccountContainer from "./views/myAccount/MyAccountContainer";
 const App = () => {
   const location = useLocation();
   useGetAllCustomersQuery("");
@@ -15,6 +17,7 @@ const App = () => {
 
   return (
     <>
+      <PrivateRoute path={"/my-account"} component={MyAccountContainer} />
       <UIWrapper>
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>

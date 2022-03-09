@@ -6,6 +6,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FormEvent, SyntheticEvent, useState } from "react";
 import Alert from "@mui/material/Alert";
 import { NavLink } from "react-router-dom";
+import PrivateRoute from "../../auth/PrivateRoute";
 const useStyles = makeStyles(
   (theme: { breakpoints: { down: (arg0: string) => any } }) => ({
     top: {
@@ -242,8 +243,12 @@ const Footer = () => {
           </div>
           <div>
             <Typography className={classes.title}>Account</Typography>
-            <Typography>My Account</Typography>
-            <Typography>Orders</Typography>
+
+            <NavLink to="/my-account" className={classes.links}>
+              <Typography>My Account</Typography>
+            </NavLink>
+
+            {/* <Typography>Orders</Typography> */}
           </div>
         </Grid>
         <Grid sm={5} item md={4}>
