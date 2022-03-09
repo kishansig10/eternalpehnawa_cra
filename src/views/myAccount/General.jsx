@@ -33,6 +33,12 @@ const usestyles = makeStyles((theme) => ({
       borderRadius: "1rem",
     },
   },
+
+  gridItemFields: {
+    [theme.breakpoints.down("md")]: {
+      width: "-webkit-fill-available",
+    },
+  },
   profileDataContainer: {
     borderRadius: "1rem",
     "&>h6": {
@@ -78,7 +84,7 @@ const General = ({ user }) => {
           <Typography variant="h6">Profile</Typography>
           <Divider />
           <Grid container spacing={3}>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="Name"
@@ -89,7 +95,7 @@ const General = ({ user }) => {
                 disabled={user?.name}
               />
             </Grid>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="Email Address"
@@ -100,7 +106,7 @@ const General = ({ user }) => {
                 disabled={user?.email}
               />
             </Grid>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="Phone number"
@@ -110,7 +116,7 @@ const General = ({ user }) => {
                 defaultValue={user?.phoneNumber}
               />
             </Grid>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="Country"
@@ -120,7 +126,7 @@ const General = ({ user }) => {
                 defaultValue={user?.country}
               />
             </Grid>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="State/Region"
@@ -130,7 +136,7 @@ const General = ({ user }) => {
                 defaultValue={user?.stateRegion}
               />
             </Grid>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.gridItemFields}>
               <TextField
                 className={classes.textfield}
                 label="City"

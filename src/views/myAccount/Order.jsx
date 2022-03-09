@@ -15,22 +15,28 @@ import {
   ListItemText,
 } from "@mui/material";
 import OrderTracker from "./OrderTracker";
+import { makeStyles } from "@mui/styles";
+const usestyles = makeStyles((theme) => ({
+  root: {
+    width: "50%",
+    margin: "2rem auto",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
+  },
+}));
 
 const Order = ({ user }) => {
+  const classes = usestyles();
   const { data, isLoading, error } = useCustOrdersQuery(user.id);
   const [refundTracker, setRefundTracker] = React.useState(false);
-  React.useEffect(() => {
-    console.log("first");
-  }, [refundTracker]);
+  React.useEffect(() => {}, [refundTracker]);
   const OrderList = () => {
     return (
       <>
         {data?.data?.map((order) => {
           return (
-            <Accordion
-              key={order.id}
-              sx={{ width: "50%", margin: "2rem auto" }}
-            >
+            <Accordion key={order.id} className={classes.root}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
