@@ -95,9 +95,11 @@ export const Filter = () => {
 
   const getArtisanList = () => {
     let artisanList = products?.map((product: any) => {
-      return product.attributes.filter(
-        (attribute: any) => attribute.name === "artisan"
-      )[0].value;
+      if (product) {
+        return product?.attributes?.filter(
+          (attribute: any) => attribute.name === "artisan"
+        )[0]?.value;
+      }
     });
     artisanList = [...Array.from(new Set(artisanList))];
     artisanList.splice(artisanList.indexOf("Not available"), 1); //remove 'Not available' from artisan list
