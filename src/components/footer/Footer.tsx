@@ -5,7 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { FormEvent, SyntheticEvent, useState } from "react";
 import Alert from "@mui/material/Alert";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import PrivateRoute from "../../auth/PrivateRoute";
 const useStyles = makeStyles(
   (theme: { breakpoints: { down: (arg0: string) => any } }) => ({
@@ -50,18 +50,21 @@ const useStyles = makeStyles(
         transition: ".5s ease",
         "&:hover": {
           color: "#4966AA",
+          cursor: "pointer",
         },
       },
       "& #instagram": {
         transition: ".5s ease",
         "&:hover": {
           color: "#C135A9",
+          cursor: "pointer",
         },
       },
       "& #youtube": {
         transition: ".5s ease",
         "&:hover": {
           color: "#FE0101",
+          cursor: "pointer",
         },
       },
       "& #pinterest": {
@@ -184,6 +187,10 @@ const Footer = () => {
   //     return;
   //   }
   // };
+
+  const handleSocialMediaClick = (url) => {
+    window.open(url, "_blank");
+  };
   return (
     <footer>
       <div className={classes.top}>
@@ -256,7 +263,13 @@ const Footer = () => {
             <Typography className={classes.title}>social media</Typography>
             <div className={classes.socialMediaIcons}>
               <span id="facebook">
-                <FacebookIcon />
+                <FacebookIcon
+                  onClick={(e) =>
+                    handleSocialMediaClick(
+                      "https://www.facebook.com/pehnawabhopal"
+                    )
+                  }
+                />
               </span>
               <span id="instagram">
                 <InstagramIcon />

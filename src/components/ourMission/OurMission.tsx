@@ -260,7 +260,7 @@ const OurStory = () => {
         </Grid>
         <Grid item sm={12} md={5}>
           <div className={classes.ytVideo}>
-            <iframe
+            {/* <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/wi-IJjwh7YY?controls=0"
@@ -268,7 +268,7 @@ const OurStory = () => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
           </div>
         </Grid>
       </Grid>
