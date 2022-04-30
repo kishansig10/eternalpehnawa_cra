@@ -4,7 +4,10 @@ import React, { useEffect } from "react";
 // import Product from "./Product";
 import Product from "../../components/products/Product";
 import { Link } from "react-router-dom";
-import { useGetProductCategoryQuery } from "../../redux/services/products";
+import {
+  useGetAllCategoriesQuery,
+  useGetProductCategoryQuery,
+} from "../../redux/services/products";
 import ProductSkeleton from "../../components/products/ProductSkeleton";
 const useStyles = makeStyles(() => ({
   container: {
@@ -40,40 +43,48 @@ const FeaturedProducts = () => {
   const classes = useStyles();
 
   const {
-    data: saree,
-    error: sareeErr,
-    isLoading: sareeLoading,
-  } = useGetProductCategoryQuery("saree");
-  const {
-    data: suit,
-    error: suitErr,
-    isLoading: suitLoading,
-  } = useGetProductCategoryQuery("suit");
+    data: categories,
+    error: categoriesErr,
+    isLoading: categoriesLoading,
+  } = useGetAllCategoriesQuery("");
+
   const {
     data: homeDecor,
     error: homeDecorErr,
     isLoading: homeDecorLoading,
-  } = useGetProductCategoryQuery("home-decor");
+  } = useGetProductCategoryQuery(categories?.data[0]?.slug);
+
+  const {
+    data: suit,
+    error: suitErr,
+    isLoading: suitLoading,
+  } = useGetProductCategoryQuery(categories?.data[1]?.slug);
+
+  const {
+    data: saree,
+    error: sareeErr,
+    isLoading: sareeLoading,
+  } = useGetProductCategoryQuery(categories?.data[2]?.slug);
 
   return (
     <section className={classes.container}>
       <div className={classes.wrapper}>
         <p className={classes.title}>Featured Products</p>
         <Grid container spacing={4} justifyContent="center">
-          {!(sareeLoading && suitLoading && homeDecorLoading) ? (
+          {!(sareeLoading && homeDecorLoading && sareeLoading) ? (
             <>
-              {saree?.data.slice(0, 1).map((saree: any) => (
-                <Grid item xs={12} sm={6} md={6} lg={4} key={saree.name}>
+              {saree?.data?.slice(0, 1)?.map((saree: any) => (
+                <Grid item xs={12} sm={6} md={6} lg={4} key={saree?.name}>
                   <Product product={saree} view="grid" />
                 </Grid>
               ))}
-              {suit?.data.slice(0, 1).map((suit: any) => (
-                <Grid item xs={12} sm={6} md={6} lg={4} key={suit.name}>
+              {suit?.data?.slice(0, 1)?.map((suit: any) => (
+                <Grid item xs={12} sm={6} md={6} lg={4} key={suit?.name}>
                   <Product product={suit} view="grid" />
                 </Grid>
               ))}
-              {homeDecor?.data.slice(0, 1).map((homeDecor: any) => (
-                <Grid item xs={12} sm={6} md={6} lg={4} key={homeDecor.name}>
+              {homeDecor?.data?.slice(0, 1)?.map((homeDecor: any) => (
+                <Grid item xs={12} sm={6} md={6} lg={4} key={homeDecor?.name}>
                   <Product product={homeDecor} view="grid" />
                 </Grid>
               ))}

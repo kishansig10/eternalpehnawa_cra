@@ -65,6 +65,7 @@ export const Filter = () => {
   const classes = useStyles();
   const location = useLocation();
   const { data: categories } = useGetAllCategoriesQuery("");
+
   const [categoryTabValue, setCategoryTabValue] = useState(location.pathname);
   const dispatch = useDispatch();
   const [getEachCategory, childCategory] = useGetEachCategoryMutation({
@@ -80,7 +81,9 @@ export const Filter = () => {
       const categoryIdentiferId = categories?.data?.filter(
         (category: any) => category.slug === namePath
       );
-      if (categoryIdentiferId) {
+
+      if (categoryIdentiferId[0]?.id) {
+        console.log("first", categoryIdentiferId[0]?.id);
         getEachCategory(categoryIdentiferId[0]?.id);
       }
     }

@@ -26,18 +26,18 @@ const routes = [
     path: "/category",
     component: CategoriesContainer,
   },
+  // {
+  //   path: "/all-products/category/saree",
+  //   component: SareeContainer,
+  // },
   {
-    path: "/all-products/category/saree",
-    component: SareeContainer,
-  },
-  {
-    path: "/all-products/category/suit",
+    path: "/all-products/category/:id",
     component: SuitContainer,
   },
-  {
-    path: "/all-products/category/home-decor",
-    component: HomeDecorContainer,
-  },
+  // {
+  //   path: "/all-products/category/home-decor",
+  //   component: HomeDecorContainer,
+  // },
   {
     path: "/all-products/product/:id",
     component: ProductContainer,
