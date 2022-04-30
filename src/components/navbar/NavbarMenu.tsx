@@ -2,6 +2,7 @@ import { ChangeEvent, ReactNode, useRef, useEffect } from "react";
 import { makeStyles } from "@mui/styles";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import { useGetAllCategoriesQuery } from "../../redux/services/products";
 
 const useStyles = makeStyles({
   wrapper: {
@@ -149,53 +150,36 @@ const NavbarMenu = ({
       ease: "power1.inOut",
     });
   };
+
+  const {
+    data: categories,
+    error: categoriesErr,
+    isLoading: categoriesLoading,
+  } = useGetAllCategoriesQuery("");
   return (
     <div className={classes.wrapper}>
       <div className={classes.menuLinks}>
         <nav>
           <ul>
-            <li>
-              <Link
-                onMouseEnter={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHover(e)
-                }
-                onMouseOut={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHoverExit(e)
-                }
-                ref={level1}
-                to="/all-products/category/saree"
-              >
-                Saree
-              </Link>
-            </li>
-            <li>
-              <Link
-                onMouseEnter={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHover(e)
-                }
-                onMouseOut={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHoverExit(e)
-                }
-                ref={level2}
-                to="/all-products/category/suit"
-              >
-                Suits
-              </Link>
-            </li>
-            <li>
-              <Link
-                onMouseEnter={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHover(e)
-                }
-                onMouseOut={(e: ChangeEvent<HTMLInputElement>) =>
-                  handleHoverExit(e)
-                }
-                ref={level3}
-                to="/all-products/category/home-decor"
-              >
-                Home Decor
-              </Link>
-            </li>
+            {categories &&
+              categories?.data?.map((category: any) => {
+                return (
+                  <li key={category?.id}>
+                    <Link
+                      onMouseEnter={(e: ChangeEvent<HTMLInputElement>) =>
+                        handleHover(e)
+                      }
+                      onMouseOut={(e: ChangeEvent<HTMLInputElement>) =>
+                        handleHoverExit(e)
+                      }
+                      ref={level1}
+                      to={`/all-products/category/${category?.slug}`}
+                    >
+                      {category?.name}
+                    </Link>
+                  </li>
+                );
+              })}
           </ul>
         </nav>
         <div ref={info} className={classes.info}>
