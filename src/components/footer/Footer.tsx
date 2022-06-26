@@ -115,6 +115,10 @@ const useStyles = makeStyles(
         color: "#DFC387",
       },
     },
+    linkIcons:{
+      color: "inherit",
+      textDecoration: "none",
+    },
   })
 );
 
@@ -224,9 +228,7 @@ const Footer = () => {
             help &#38; information
           </Typography>
           <div>
-            <NavLink to="/contact-us" className={classes.links}>
-              <Typography>FAQs</Typography>
-            </NavLink>
+           
             <NavLink to="/contact-us" className={classes.links}>
               <Typography>Delivery and Shipping</Typography>
             </NavLink>
@@ -272,7 +274,10 @@ const Footer = () => {
                 />
               </span>
               <span id="instagram">
-                <InstagramIcon />
+                <InstagramIcon   onClick={(e) =>
+                    handleSocialMediaClick(
+                      "https://www.instagram.com/eternalpehnawa/"
+                    )} />
               </span>
               <span id="youtube">
                 <YouTubeIcon />

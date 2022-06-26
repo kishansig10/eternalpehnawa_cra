@@ -9,6 +9,14 @@ import Cart from "../Cart/Cart";
 import WishList from "../../components/wishlist/WishList";
 
 const useStyles = makeStyles(() => ({
+  navHead: {
+    backgroundColor: "rgb(246, 241, 236)",
+    position: "sticky",
+    top: 0,
+    zIndex: 6,
+    boxShadow: "-7px 4px 12px 7px #05010130",
+    transition: "0.25s cubic-bezier(0.68, -0.22, 1, 1)"
+  },
   container: {
     height: "auto",
     marginBottom: "1vh",
@@ -49,6 +57,22 @@ const Navbar = () => {
   });
 
   const [disabled, setDisabled] = useState(false);
+  const [scroll, setScrolled] = useState(false);
+
+    // hook to listen scroll event to show the navbar
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
+    const handleScroll = () => {
+      const offset = window.pageYOffset;
+      offset > 210 ? setScrolled(true) : setScrolled(false);
+    };
+  
 
   /** 
    * TODO for responsiveness
@@ -110,7 +134,7 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+     <header className={scroll && classes.navHead}>
       <div className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.innerHeader}>
