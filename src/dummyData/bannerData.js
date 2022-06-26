@@ -6,7 +6,7 @@ export const bannerData = [
     price: "$345k",
     path: "/assets",
     label: "Home",
-    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1643465069/eternal_pehnawa/banner2_d899wj.jpg",
+    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232812/eternal_pehnawa/PHOTO-2022-06-15-13-51-02_oizftu.jpg",
     alt: "Home",
   },
   {
@@ -15,7 +15,7 @@ export const bannerData = [
     price: "$3452k",
     path: "/assets",
     label: "Home2",
-    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1643465058/eternal_pehnawa/banner3_bgul02.jpg",
+    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232814/eternal_pehnawa/PHOTO-2022-06-15-13-45-14_2_cjlhzv.jpg",
     alt: "Home2",
   },
   {
@@ -24,7 +24,7 @@ export const bannerData = [
     price: "$343k",
     path: "/assets",
     label: "Home3",
-    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1643465059/eternal_pehnawa/banner1_vgqye2.jpg",
+    img: "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232813/eternal_pehnawa/PHOTO-2022-06-15-13-45-49_xjfbqu.jpg",
     alt: "Home3sss",
   },
 ];

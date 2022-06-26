@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ReactPlayer from "react-player";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useStyles: any = makeStyles((theme: any) => ({
   root: {
@@ -28,14 +29,16 @@ const useStyles: any = makeStyles((theme: any) => ({
     },
   },
   ytVideo: {
-    width: "25rem",
-    height: "15rem",
     margin: "auto",
     borderRadius: "0.8rem",
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       width: "90vw",
       height: "14rem",
+    },
+    "&>div": {
+      width: "auto !important",
+      height: "auto !important",
     },
   },
   missionBody: {
@@ -260,15 +263,10 @@ const OurStory = () => {
         </Grid>
         <Grid item sm={12} md={5}>
           <div className={classes.ytVideo}>
-            {/* <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/wi-IJjwh7YY?controls=0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe> */}
+            <ReactPlayer
+              controls
+              url="https://res.cloudinary.com/cryptomonthly/video/upload/v1656249155/eternal_pehnawa/VIDEO-2022-06-26-18-41-54_lwtlcv.mp4"
+            />
           </div>
         </Grid>
       </Grid>
@@ -326,14 +324,15 @@ const OurStory = () => {
             animate={controls}
             initial="hidden"
             variants={rightVariant}
+            height="450px"
             ref={ref2}
             src={
-              "https://res.cloudinary.com/cryptomonthly/image/upload/v1643465021/eternal_pehnawa/image02_xoowht.jpg"
+              "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232813/eternal_pehnawa/PHOTO-2022-06-15-13-45-49_xjfbqu.jpg"
             }
             alt="our-mission"
           ></motion.img>
         </div>
-        <div>
+        {/* <div>
           <div>
             <div>
               <Typography
@@ -360,18 +359,9 @@ const OurStory = () => {
             alt="our-mission"
             ref={ref}
           ></motion.img>
-        </div>
+        </div> */}
       </div>
-      <motion.img
-        variants={zoomVariant}
-        initial="hidden"
-        animate={controls}
-        ref={ref4}
-        src={
-          "https://res.cloudinary.com/cryptomonthly/image/upload/v1643465023/eternal_pehnawa/background1_ep8nnf.jpg"
-        }
-        alt="our-story-bg"
-      ></motion.img>
+      <div></div>
     </section>
   );
 };
