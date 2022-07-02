@@ -28,7 +28,10 @@ const useStyles = makeStyles({
   },
   menuLayers: {
     position: "relative",
-    backgroundColor: "#e20001",
+    //  backgroundColor: "#e20001",
+    // background: "#333333" /* fallback for old browsers */,
+    background:
+      "linear-gradient(to right, #ee0979, #ff6a00)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
     height: "100%",
     overflow: "hidden",
   },

@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     top: 0,
     zIndex: 6,
     boxShadow: "-7px 4px 12px 7px #05010130",
-    transition: "0.25s cubic-bezier(0.68, -0.22, 1, 1)"
+    transition: "0.25s cubic-bezier(0.68, -0.22, 1, 1)",
   },
   container: {
     height: "auto",
@@ -59,20 +59,19 @@ const Navbar = () => {
   const [disabled, setDisabled] = useState(false);
   const [scroll, setScrolled] = useState(false);
 
-    // hook to listen scroll event to show the navbar
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll, { passive: true });
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+  // hook to listen scroll event to show the navbar
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    const handleScroll = () => {
-      const offset = window.pageYOffset;
-      offset > 210 ? setScrolled(true) : setScrolled(false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-  
+  }, []);
+
+  const handleScroll = () => {
+    const offset = window.pageYOffset;
+    offset > 210 ? setScrolled(true) : setScrolled(false);
+  };
 
   /** 
    * TODO for responsiveness
@@ -134,7 +133,7 @@ const Navbar = () => {
   };
 
   return (
-     <header className={scroll && classes.navHead}>
+    <header className={scroll && classes.navHead}>
       <div className={classes.container}>
         <div className={classes.wrapper}>
           <div className={classes.innerHeader}>
@@ -144,7 +143,7 @@ const Navbar = () => {
                 size="small"
                 disabled={disabled}
                 onClick={() => handleMenu()}
-                sx={{ color: "#191919" }}
+                sx={{ color: "#191919", fontWeight: "bold" }}
               >
                 Categories
               </Button>
