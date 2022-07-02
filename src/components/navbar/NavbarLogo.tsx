@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   logo: {
     height: "1em",
     width: "1em",
-    fontSize: "1rem",
+    fontSize: "5rem",
   },
 });
 const NavbarLogo = () => {
