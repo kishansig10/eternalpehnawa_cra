@@ -503,7 +503,7 @@ const ProductComponent = ({ data }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
-                    -Free shipping on all products in India. -Once the order is
+                    Free shipping on all products in India. -Once the order is
                     placed, it takes 5 to 7 business days to dispatch after
                     placing the order. Then 4 to 5 business days for it to get
                     delivered. -So, the estimated time would be 10 to 15 working
@@ -520,7 +520,7 @@ const ProductComponent = ({ data }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
-                    -We have a customer friendly 3 days return and 10 days
+                    We have a customer friendly 3 days return and 10 days
                     exchange policy. -If you have received the product in a bad
                     condition or if the packaging is damaged, customer are
                     requested to take picture and make video while opening a
@@ -543,7 +543,7 @@ const ProductComponent = ({ data }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
-                    -If you have to cancel an order, kindly do so before your
+                    If you have to cancel an order, kindly do so before your
                     order is shipped through your account. If you cancel your
                     order before it is shipped, we will refund you the entire
                     amount.
