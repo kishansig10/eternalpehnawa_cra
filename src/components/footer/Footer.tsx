@@ -115,7 +115,7 @@ const useStyles = makeStyles(
         color: "#DFC387",
       },
     },
-    linkIcons:{
+    linkIcons: {
       color: "inherit",
       textDecoration: "none",
     },
@@ -228,11 +228,26 @@ const Footer = () => {
             help &#38; information
           </Typography>
           <div>
-           
-            <NavLink to="/contact-us" className={classes.links}>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Delivery and Shipping",
+                },
+              }}
+              className={classes.links}
+            >
               <Typography>Delivery and Shipping</Typography>
             </NavLink>
-            <NavLink to="/contact-us" className={classes.links}>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Return and Exchanges",
+                },
+              }}
+              className={classes.links}
+            >
               <Typography>Return and Exchanges</Typography>
             </NavLink>
           </div>
@@ -240,15 +255,20 @@ const Footer = () => {
         <Grid sm={2} item md={3}>
           <div>
             <Typography className={classes.title}>Areas</Typography>
-            <NavLink to="/about" className={classes.links}>
+            <NavLink   to={{
+                pathname: "/about",
+                state: {
+                  page: "About Us",
+                },
+              }} className={classes.links}>
               <Typography>About Us</Typography>
             </NavLink>
             <NavLink to="/all-products" className={classes.links}>
               <Typography>Products</Typography>
             </NavLink>
-            <NavLink to="/contact-us" className={classes.links}>
-              <Typography>Contact Us</Typography>
-            </NavLink>
+
+            <Typography>Contact Us</Typography>
+            <Typography variant="body1">eternalpehnawa@gmail.com</Typography>
           </div>
           <div>
             <Typography className={classes.title}>Account</Typography>
@@ -274,10 +294,13 @@ const Footer = () => {
                 />
               </span>
               <span id="instagram">
-                <InstagramIcon   onClick={(e) =>
+                <InstagramIcon
+                  onClick={(e) =>
                     handleSocialMediaClick(
                       "https://www.instagram.com/eternalpehnawa/"
-                    )} />
+                    )
+                  }
+                />
               </span>
               <span id="youtube">
                 <YouTubeIcon />

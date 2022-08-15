@@ -321,7 +321,7 @@ const OurStory = () => {
             // animate={controls}
             // initial="hidden"
             // variants={rightVariant}
-            height="450px"
+            height="451px"
             ref={ref2}
             src={
               "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232813/eternal_pehnawa/PHOTO-2022-06-15-13-45-49_xjfbqu.jpg"
