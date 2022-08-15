@@ -9,8 +9,9 @@ const useStyles = makeStyles({
     position: "relative",
   },
   menuLinks: {
+    gap: "32rem",
     display: "flex",
-    justifyContent: "space-between",
+    //justifyContent: "space-between",
     alignItems: "center",
     position: "relative",
     top: "200px",
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
         margin: 0,
         "&>li": {
           listStyle: "none",
-          fontSize: "6rem",
+          fontSize: "5rem",
           fontWeight: "700",
           cursor: "pointer",
           height: "135px",
@@ -47,9 +48,10 @@ const useStyles = makeStyles({
   },
   info: {
     color: "#fff",
-    width: "400px",
-    "&>h3": {
-      fontSize: "1.2rem",
+    width: "450px",
+    lineHeight: "2rem",
+    "&>h2": {
+      //fontSize: "1.2rem",
       margin: "8px auto",
     },
     "&>p": {
@@ -183,7 +185,7 @@ const NavbarMenu = ({
           </ul>
         </nav>
         <div ref={info} className={classes.info}>
-          <h3>Our Promise</h3>
+          <h2>Our Promise</h2>
           <p>
             Eternal Pehnawa is an exclusive store providing a wide range of
             Indian ethnic wear. EP act as a connector between customer and

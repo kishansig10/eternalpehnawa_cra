@@ -59,7 +59,11 @@ const NavbarLogin = () => {
       {isAuthenticated ? (
         <ProfileDropdown user={user} />
       ) : (
-        <Button size="small" sx={{ color: "#191919" }} onClick={handleClick}>
+        <Button
+          size="small"
+          sx={{ color: "#191919", fontWeight: "bold" }}
+          onClick={handleClick}
+        >
           Login
         </Button>
       )}

@@ -8,6 +8,7 @@ import ReactPlayer from "react-player";
 const useStyles: any = makeStyles((theme: any) => ({
   root: {
     padding: "2rem 5vw",
+    overflow: "hidden",
     fontFamily: "'Playfair Display', serif !important",
     // height: "35rem",
     background: "linear-gradient(90deg, #E0C387 85%, #1A181F 15%)",
@@ -320,17 +321,17 @@ const OurStory = () => {
             </div>
           </div>
 
-          <motion.img
-            animate={controls}
-            initial="hidden"
-            variants={rightVariant}
+          <img
+            // animate={controls}
+            // initial="hidden"
+            // variants={rightVariant}
             height="450px"
             ref={ref2}
             src={
               "https://res.cloudinary.com/cryptomonthly/image/upload/v1656232813/eternal_pehnawa/PHOTO-2022-06-15-13-45-49_xjfbqu.jpg"
             }
             alt="our-mission"
-          ></motion.img>
+          ></img>
         </div>
         {/* <div>
           <div>
