@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     position: "relative",
   },
   menuLinks: {
-    gap: "32rem",
+    gap: "10rem",
     display: "flex",
     //justifyContent: "space-between",
     alignItems: "center",
@@ -158,6 +158,7 @@ const NavbarMenu = ({
     error: categoriesErr,
     isLoading: categoriesLoading,
   } = useGetAllCategoriesQuery("");
+  console.log("category data", categories);
   return (
     <div className={classes.wrapper}>
       <div className={classes.menuLinks}>
