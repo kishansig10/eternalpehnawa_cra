@@ -2,8 +2,6 @@
   "name": "eternalpehnawa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "www.eternalpehnawa.com",
-  "proxy": "www.eternalpehnawa.com",
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
     "@chec/commerce.js": "^2.8.0",
