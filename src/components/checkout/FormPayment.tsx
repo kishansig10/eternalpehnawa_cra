@@ -66,7 +66,7 @@ const FormPayment = ({ backStep, customerShippingData, nextStep }) => {
       const orderDetails = data.data;
       setIsLoading(true);
       const options = {
-        key: checkoutToken?.gateways?.config?.key_id, // Enter the Key ID generated from the Dashboard
+        key: checkoutToken?.gateways[1]?.config?.key_id, // Enter the Key ID generated from the Dashboard
         name: "Eternal Pehnawa",
         currency: orderDetails.currency,
         amount: orderDetails.amount,
