@@ -71,7 +71,7 @@ const FormPayment = ({ backStep, customerShippingData, nextStep }) => {
         currency: orderDetails.currency,
         amount: orderDetails.amount,
         order_id: orderDetails.id,
-        description: "Thankyou for your test donation",
+        description: "Thankyou for your purchase",
         image: "https://manuarora.in/logo.png",
         handler: async function (response) {
           // Validate payment at server - using webhooks is a better idea.
