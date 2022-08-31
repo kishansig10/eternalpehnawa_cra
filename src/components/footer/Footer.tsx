@@ -250,17 +250,53 @@ const Footer = () => {
             >
               <Typography>Return and Exchanges</Typography>
             </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Privacy Policy",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Privacy Policy</Typography>
+            </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Terms and Conditions",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Terms and Conditions</Typography>
+            </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Refund and Cancellations",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Refund and Cancellations</Typography>
+            </NavLink>
           </div>
         </Grid>
         <Grid sm={2} item md={3}>
           <div>
             <Typography className={classes.title}>Areas</Typography>
-            <NavLink   to={{
+            <NavLink
+              to={{
                 pathname: "/about",
                 state: {
                   page: "About Us",
                 },
-              }} className={classes.links}>
+              }}
+              className={classes.links}
+            >
               <Typography>About Us</Typography>
             </NavLink>
             <NavLink to="/all-products" className={classes.links}>
