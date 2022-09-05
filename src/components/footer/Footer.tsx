@@ -305,6 +305,10 @@ const Footer = () => {
 
             <Typography>Contact Us</Typography>
             <Typography variant="body1">eternalpehnawa@gmail.com</Typography>
+            <Typography variant="body1">Phone-9425301462</Typography>
+            <Typography variant="body1">
+              Address- 502, Regal treasure Ayodhya by pass Road, Bhopal 462041
+            </Typography>
           </div>
           <div>
             <Typography className={classes.title}>Account</Typography>
