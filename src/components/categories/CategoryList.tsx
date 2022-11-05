@@ -5,6 +5,7 @@ import { useGetAllCategoriesQuery } from "../../redux/services/products";
 
 const CategoryList = () => {
   const { data } = useGetAllCategoriesQuery("");
+
   return (
     <div style={{ marginTop: "6rem" }}>
       <Grid container spacing={3}>

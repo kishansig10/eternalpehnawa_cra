@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({

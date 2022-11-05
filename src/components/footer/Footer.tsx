@@ -234,12 +234,47 @@ const Footer = () => {
             <NavLink to="/return_exchange" className={classes.links}>
               <Typography>Return and Exchanges</Typography>
             </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Privacy Policy",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Privacy Policy</Typography>
+            </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Terms and Conditions",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Terms and Conditions</Typography>
+            </NavLink>
+            <NavLink
+              to={{
+                pathname: "/about",
+                state: {
+                  page: "Refund and Cancellations",
+                },
+              }}
+              className={classes.links}
+            >
+              <Typography>Refund and Cancellations</Typography>
+            </NavLink>
           </div>
         </Grid>
         <Grid sm={2} item md={3}>
           <div>
             <Typography className={classes.title}>Areas</Typography>
+
             <NavLink to="/about" className={classes.links}>
+
               <Typography>About Us</Typography>
             </NavLink>
             <NavLink to="/all-products" className={classes.links}>
@@ -248,6 +283,10 @@ const Footer = () => {
 
             <Typography>Contact Us</Typography>
             <Typography variant="body1">eternalpehnawa@gmail.com</Typography>
+            <Typography variant="body1">Phone-9425301462</Typography>
+            <Typography variant="body1">
+              Address- 502, Regal treasure Ayodhya by pass Road, Bhopal 462041
+            </Typography>
           </div>
           <div>
             <Typography className={classes.title}>Account</Typography>

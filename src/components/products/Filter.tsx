@@ -82,7 +82,7 @@ export const Filter = () => {
         (category: any) => category.slug === namePath
       );
 
-      if (categoryIdentiferId[0]?.id) {
+      if (categoryIdentiferId?.[0]?.id) {
         console.log("first", categoryIdentiferId[0]?.id);
         getEachCategory(categoryIdentiferId[0]?.id);
       }
