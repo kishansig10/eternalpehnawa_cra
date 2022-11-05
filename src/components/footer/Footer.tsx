@@ -228,26 +228,10 @@ const Footer = () => {
             help &#38; information
           </Typography>
           <div>
-            <NavLink
-              to={{
-                pathname: "/about",
-                state: {
-                  page: "Delivery and Shipping",
-                },
-              }}
-              className={classes.links}
-            >
+            <NavLink to="/delivery_shipping" className={classes.links}>
               <Typography>Delivery and Shipping</Typography>
             </NavLink>
-            <NavLink
-              to={{
-                pathname: "/about",
-                state: {
-                  page: "Return and Exchanges",
-                },
-              }}
-              className={classes.links}
-            >
+            <NavLink to="/return_exchange" className={classes.links}>
               <Typography>Return and Exchanges</Typography>
             </NavLink>
           </div>
@@ -255,12 +239,7 @@ const Footer = () => {
         <Grid sm={2} item md={3}>
           <div>
             <Typography className={classes.title}>Areas</Typography>
-            <NavLink   to={{
-                pathname: "/about",
-                state: {
-                  page: "About Us",
-                },
-              }} className={classes.links}>
+            <NavLink to="/about" className={classes.links}>
               <Typography>About Us</Typography>
             </NavLink>
             <NavLink to="/all-products" className={classes.links}>

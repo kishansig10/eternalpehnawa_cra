@@ -11,6 +11,8 @@ import MyAccountContainer from "../views/myAccount/MyAccountContainer";
 import CheckoutStepperContainer from "../views/checkout-stepper/CheckoutStepperContainer";
 import CategoriesContainer from "../views/categories/CategoriesContainer";
 import Confirmation from "../components/checkout/Confirmation";
+import DeliveryPolicy from "../views/about/DeliveryPolicy";
+import ReturnPolicy from "../views/about/ReturnPolicy";
 
 const routes = [
   {
@@ -58,6 +60,14 @@ const routes = [
     path: "/confirmation/:id",
     component: Confirmation,
   },
+  {
+    path: "/delivery_shipping",
+    component: DeliveryPolicy,
+  },
+  {
+    path: "/return_exchange",
+    component: ReturnPolicy,
+  }
 ];
 
 export default routes;
